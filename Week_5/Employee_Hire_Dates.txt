@@ -1,0 +1,6 @@
+Employee Hire Dates
+James Smith - 01/01/2023
+John Doe - 07/01/2000 
+Jane Smith - 12/05/1985
+Alice Johnson - 08/13/1996
+Sarah Imhoff - 01/16/2016

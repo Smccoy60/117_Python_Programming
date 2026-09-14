@@ -1,0 +1,4 @@
+I generated a program to write employee names into a file. Then give the message that Employee names have been written to the file: 
+I ran the program and it created a Employee Names.txt file.  I then write anohter name on the txt file and ran the program again.  It overwrote the file and removed the name that I typed in the txt file. 
+
+The next program I generated was a read program.  I have this file reading from the Employee Hire Dates txt file. I have the program printing the contents of the file and showing the file where it is getting the information from and then printing all the contents of the file.  I ran the program and got the information and then added another line to the file and ran again.  This new output gave me the additional line as expected. 
