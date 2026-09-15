@@ -1,0 +1,30 @@
+[
+    {
+        "employeeid": 10012,
+        "name": "James",
+        "department": "Payroll",
+        "annualsalary": 50000,
+        "active": true
+    },
+    {
+        "employeeid": 10045,
+        "name": "Susan",
+        "department": "Finance",
+        "annualsalary": 75000,
+        "active": false
+    },
+    {
+        "employeeid": 10578,
+        "name": "Greg",
+        "department": "Instructor",
+        "annualsalary": 80000,
+        "active": true
+    },
+    {
+        "employeeid": 45678,
+        "name": "Samual",
+        "department": "IT",
+        "annualsalary": 55000,
+        "active": true
+    }
+]
