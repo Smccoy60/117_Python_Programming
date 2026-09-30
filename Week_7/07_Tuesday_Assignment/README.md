@@ -41,6 +41,17 @@ The project will use a function-based structure.  Each major calculation will be
 
 A dictionary will likely be used to keep related employee and payroll information together.  The first version will be contained in one main Python file unless it is determined the report-saving function is better as a second file. 
 
+This first version of the program will be developed in a single Python script file.  Maybe in the future payroll calculations and report generation can be put into seperate modules. 
+
+## Potential Function List
+This project will likely contain the following functions:
+* main() - which will control the program flow
+* get_employee_data - which will collect the payroll information from the user
+* get_valid_number - which will validate the input and then handle the invalid entries
+* calculate_payroll - calculate the gross pay, taxes, deductions and net pay
+* display_summary - will display a payroll summary with the given information
+* save_report - this will save the payroll summary to a file
+
 ## Risks: 
 Potential risks may include:
 * Incorrect formulas or calculation order
