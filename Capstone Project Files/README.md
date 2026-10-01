@@ -29,3 +29,15 @@ The next seven lines of codes are to get information from the results dictionary
 
 ## This was the fourth step in my Python build.  Code the Main Function
 Now that I have all of my functions setup in these three steps, the next step is to call the functions to get everything to run.  I first setup a function that is named main, which will serve as the beginning point of the program.  The second line of this runs the get_employee_data function.  At this point the user will enter the information and then it is saved in the employee dictionary. The third line runs the calculate_payroll function.  This takes the information that was just entered into the employee dictionary and performs the payroll calculations.  This information gets stored in the results dictionary.  The fourth line runs the display_summary function.  This receives the information from the employee and results dictionaries and then prints the payroll summary to the screen. Then finally main() at the end of the code to actually run the function.  
+
+## Phase 2: Add input Validation
+I added some validation testing in my first function get_employee_data.
+
+I also added a docstring so that I could explan what this function does. 
+The first validation is to validate the employee name.  The while true start an infinite loop until a valid input is entered.  The first line prompts the user for a name.  I added the .strip to remove any extra spaces before or after the name after entered.  The if name checks whether something was entered, if the user were to just press enter the error message of Name cannot be blank would appear.  Once valid input has been entered, the loop would stop and move the next input. 
+
+The next validation is the hours worked.  I again added a loop and the while true promp starts this validation loop. My code has the try next to let the code know that may fail.  The hours worked code line gets the user's input and then will convert it to a decimal number. The program than checks if the value entered is 0 or greater, negative numbers are not allowed and you can't work negative hours.  If the input is valid, the loop will exit and go to the next line.  If the input is not valid, it will give the user some type of error code such as hours worked cannot be negative.  If so some reason a input is entered that cannot be converted to a number, an error code will appear that asks the user to please enter a valid number. 
+
+The next validation is the hourly rate.  This is setup up the same as the prior validation for hours worked. This will also give the same type of error messages if the invalid input is entered. 
+
+Then finally, the program will continue on to create the dictionary, and return the data.  

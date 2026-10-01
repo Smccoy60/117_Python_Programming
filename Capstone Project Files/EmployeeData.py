@@ -1,4 +1,33 @@
 def get_employee_data():
+    """Collect employee information and validate user input.
+    Return a dictionary containing employee information."""
+    # Validate employee name
+    while True:
+        name = input("Enter employee name: ").strip()
+        if name != "":
+            break
+        print("Error: Name cannot be blank.")
+
+    # Validate hours worked
+    while True:
+        try:
+            hours_worked = float(input("Enter hours worked: "))
+            if hours_worked >= 0:
+                break
+            print("Error: Hours worked cannot be negative.")
+        except ValueError:
+            print("Error: Please enter a valid number.")
+
+    # Validate hourly rate
+    while True:
+        try:
+            hourly_rate = float(input("Enter hourly rate: "))
+            if hourly_rate >= 0:
+                break
+            print("Error: Hourly rate cannot be negative.")
+        except ValueError:
+            print("Error: Please enter a valid number.")
+
     employee = {}
     employee["id"] = input("Enter employee ID: ")
     employee["name"] = input("Enter employee name: ")
