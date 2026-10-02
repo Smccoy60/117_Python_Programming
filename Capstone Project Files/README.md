@@ -41,3 +41,14 @@ The next validation is the hours worked.  I again added a loop and the while tru
 The next validation is the hourly rate.  This is setup up the same as the prior validation for hours worked. This will also give the same type of error messages if the invalid input is entered. 
 
 Then finally, the program will continue on to create the dictionary, and return the data.  
+
+## Phase 3: Save the report to a file
+In this next phase I created a new function called save_report.  This functions receives information from the employee dictionary and the results dictionary.  A added a docstring to describe the purpose of the function.  The next line opens the file which creates a file called payroll_report.txt and I have coded the write mode, which tells the program to erase the old contents and replace with the new contents. 
+
+The with part of the code allows the Python program to close the file when finished.  I then added the report title and put in the \n which tells the program to start a new line. I also added a separator line with - just to make output look a little easier to read. 
+
+I then have the program writing the employee information to the file.  The code first has what I want written to the file in the "", then it tells the program where the value should come from which is either the employee or the results functions above.  I added the .f to format the return number to 2 decimal places and then finally the \n to start a new line. 
+
+Finally I put in a confirmation message so the user knows that the file was created successfully.  
+
+The last piece was to update main().  I had to add the save_report to the main fuction so it actually starts the function, which creates the file and writes the payroll report. 

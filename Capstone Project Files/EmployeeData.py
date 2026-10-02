@@ -1,6 +1,17 @@
 def get_employee_data():
     """Collect employee information and validate user input.
     Return a dictionary containing employee information."""
+    employee = {}
+
+   # Validate employee ID
+    while True:
+        employee_id = input("Enter employee ID: ").strip()
+        if employee_id != "":
+            break
+        print("Error: Employee ID cannot be blank.")
+   
+    employee["id"] = employee_id
+
     # Validate employee name
     while True:
         name = input("Enter employee name: ").strip()
@@ -11,8 +22,8 @@ def get_employee_data():
     # Validate hours worked
     while True:
         try:
-            hours_worked = float(input("Enter hours worked: "))
-            if hours_worked >= 0:
+            regular_hours = float(input("Enter regular hours: "))
+            if regular_hours >= 0:
                 break
             print("Error: Hours worked cannot be negative.")
         except ValueError:
@@ -28,11 +39,9 @@ def get_employee_data():
         except ValueError:
             print("Error: Please enter a valid number.")
 
-    employee = {}
-    employee["id"] = input("Enter employee ID: ")
-    employee["name"] = input("Enter employee name: ")
-    employee["hourly_rate"] = float(input("Enter hourly rate: "))
-    employee["regular_hours"] = float(input("Enter regular hours: "))
+    employee["name"] = name
+    employee["regular_hours"] = regular_hours
+    employee["hourly_rate"] = hourly_rate
     employee["overtime_hours"] = float(input("Enter overtime hours: "))
     employee["federal_tax"] = float(input("Enter Federal tax percentage: "))
     employee["state_tax"] = float(input("Enter State tax percentage: "))
@@ -74,9 +83,33 @@ def display_summary(employee, results):
     print(f"Total Deductions: {results['total_deductions']:.2f}")
     print(f"Net Pay: {results['net_pay']:.2f}")
 
+def save_report(employee, results):
+    """Save payroll information to a text file."""
+
+    with open("payroll_report.txt", "w") as file:
+
+        file.write("Payroll Report\n")
+        file.write("------------------------\n")
+
+        file.write(f"Employee ID: {employee['id']}\n")
+        file.write(f"Employee Name: {employee['name']}\n")
+        file.write(f"Regular Hours: {employee['regular_hours']}\n")
+        file.write(f"Overtime Hours: {employee['overtime_hours']}\n")
+        file.write(f"Hourly Rate: {employee['hourly_rate']}\n")
+
+        file.write(f"Gross Pay: {results['gross_pay']:.2f}\n")
+        file.write(f"Total Deductions: {results['total_deductions']:.2f}\n")
+        file.write(f"Net Pay: {results['net_pay']:.2f}\n")
+
+    print("\nPayroll report saved to payroll_report.txt")
+    
 def main():
     employee = get_employee_data()
     results = calculate_payroll(employee)
+    print()
+    print("Payroll summary is being shown below:")
+    
     display_summary(employee, results)
+    save_report(employee, results)
 
 main()
