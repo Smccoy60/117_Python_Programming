@@ -28,9 +28,9 @@ Net Pay: $500.00
 The project will have the following limitations:
 
 * The project will use fictional information
-* Calculations will be simplifed for demonstration purposes
+* Calculations will be simplified for demonstration purposes
 * The program will not use official federal or state tax tables
-* The progrom will not connect to a payroll or HR system
+* The program will not connect to a payroll or HR system
 * The program will not process live employee information
 * The program will use only concepts and code that I can explain.
 * The first version will use manually entered information.
@@ -41,7 +41,7 @@ The project will use a function-based structure.  Each major calculation will be
 
 A dictionary will likely be used to keep related employee and payroll information together.  The first version will be contained in one main Python file unless it is determined the report-saving function is better as a second file. 
 
-This first version of the program will be developed in a single Python script file.  Maybe in the future payroll calculations and report generation can be put into seperate modules. 
+This first version of the program will be developed in a single Python script file.  Maybe in the future payroll calculations and report generation can be put into separate modules. 
 
 ## Potential Function List
 This project will likely contain the following functions:
@@ -74,4 +74,4 @@ After the core version works, some possible additions include:
 ## AI Use Boundaries: 
 AI can help me with: explaining Python concepts, debugging code, suggesting program structure, reviewing code for errors and recommend improvements
 
-I will make the final decisions about: purpose of the projecct, payroll calculation rules, input and output requirements, program structure, testing and validating the program
+I will make the final decisions about: purpose of the project, payroll calculation rules, input and output requirements, program structure, testing and validating the program
